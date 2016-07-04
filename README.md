@@ -45,8 +45,10 @@ Run the webapp directly from the project directory.
 
 # TODO
 
-* Pass arguments to _tester_ script to identify itself to collector.
-* Pass arguments to _tester_ script to check specific host(s) or via hostname DNS lookup.
+* Pass arguments via Docker to _tester_ script to:
+  * identify itself to collector,
+  * check specific host(s) or via hostname DNS lookup,
+  * run once or XX times with XX internval.
 * Basic Auth for POSTs to webapp _collector_.
 * Report queries to show slow regions.
 * Create `docker-compose` config to deploy both Postgres database and webapp _collector_.  [NICE TO HAVE]
