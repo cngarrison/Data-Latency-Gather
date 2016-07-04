@@ -1,4 +1,5 @@
 #!/usr/bin/env perl
+# PODNAME: check-latency.pl
 
 ## check-latency.pl - Description of module
 # Created by: Charlie Garrison
@@ -13,13 +14,13 @@ use v5.16;
 our $VERSION = 0.1;
 
 use FindBin;
-use lib "$FindBin::Bin/lib";
+use lib "$FindBin::Bin/../lib";
 
-use Data::Latency::Gather::Script;
+use Data::Latency::Gather::Script::Ping;
 
 
 ## Initialize and script/app
-my $ret = Data::Latency::Gather::Script->new_with_options()->run;
+my $ret = Data::Latency::Gather::Script::Ping->new_with_options()->run;
 
 exit($ret);
 

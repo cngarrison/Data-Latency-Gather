@@ -1,0 +1,8 @@
+FROM perl:5.24
+RUN cpanm -f Moo MooX::Options MooX::ClassAttribute Types::Standard namespace::autoclean
+RUN cpanm -f Data::Printer Log::Dispatchouli Try::Tiny Config::Any FindBin
+RUN cpanm -f Path::Class File::Share Hash::Merge::Simple LWP::UserAgent
+RUN cpanm -f AnyEvent AnyEvent::Ping 
+COPY . /usr/src/data-latency-gather
+WORKDIR /usr/src/data-latency-gather
+CMD [ "perl", "./bin/check-latency.pl", "print_data", "-v", "--host", "duckduckgo.com" ]
